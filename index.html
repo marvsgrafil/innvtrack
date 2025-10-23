@@ -4,300 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>InnovaTrack | Smart Seat Plan</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-    html{scroll-behavior:smooth;}
-    body{background:#fff;color:#333;overflow-x:hidden;}
-
-    /* NAVBAR */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 80px;
-      background: #008f5a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-
-    .logo-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-    .logo {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      object-fit: cover;
-    }
-
-    .nav-link {
-      color:#fff;
-      text-decoration:none;
-      font-weight:500;
-      padding:10px 15px;
-      border-radius:8px;
-      transition:.3s;
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
-    .nav-link:hover { background:#00b377; }
-    .nav-link.active { background:#00c983; }
-
-    .main-content { margin-top: 80px; }
-
-    /* HOME */
-    #home {
-      height:100vh;
-      background:url("homebackground1.jpg") center/cover no-repeat fixed;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:#fff;
-      position:relative;
-    }
-    #home::before {
-      content:"";
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,0.6);
-    }
-    .home-content {
-      position:relative;
-      z-index:1;
-      animation:float 4s ease-in-out infinite;
-    }
-    @keyframes float { 0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);} }
-    h1 { font-size:3rem; line-height:1.3; }
-    .highlight { color:#00c983; }
-
-    .home-buttons a {
-      display:inline-block;
-      margin:10px;
-      padding:12px 25px;
-      border-radius:25px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:.3s;
-    }
-    .btn { background:#00c983; color:white; }
-    .btn:hover { background:#00a96e; }
-    .btn-outline { border:2px solid #00c983; color:white; }
-    .btn-outline:hover { background:#00c983; }
-
-    /* SECTIONS */
-    section { padding:100px 20px; text-align:center; }
-
-    h2 {
-      color:#004d40;
-      font-size:2.2rem;
-      margin-bottom:30px;
-      position:relative;
-    }
-    h2::after {
-      content:"";
-      display:block;
-      width:80px;
-      height:4px;
-      background:#00c983;
-      margin:10px auto 0;
-      border-radius:2px;
-    }
-
-    /* ABOUT */
-    .about-container {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:20px;
-      max-width:1000px;
-      margin:auto;
-    }
-    .about-box {
-      background:#e8f6ef;
-      padding:25px;
-      border-radius:12px;
-      flex:1 1 250px;
-      min-width:250px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.1);
-      transition:.3s;
-    }
-    .about-box:hover { transform:translateY(-5px); }
-    .about-box h3 { color:#00693a; margin-bottom:10px; }
-
-    /* FEATURES */
-    .feature-container {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-      gap:20px;
-      max-width:1100px;
-      margin:auto;
-    }
-    .feature-box {
-      background:#e8f6ef;
-      padding:25px;
-      border-radius:12px;
-      transition:.3s;
-    }
-    .feature-box:hover { transform:translateY(-5px); }
-    .feature-box i {
-      font-size:40px;
-      color:#00c983;
-      margin-bottom:10px;
-    }
-
-    /* HOW IT WORKS */
-    .steps {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:20px;
-      max-width:1000px;
-      margin:auto;
-    }
-    .step {
-      background:#e8f6ef;
-      padding:25px;
-      border-radius:12px;
-      flex:1 1 250px;
-      min-width:250px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.1);
-      transition:.3s;
-    }
-    .step:hover { transform:translateY(-5px); }
-    .step i {
-      font-size:40px;
-      color:#00c983;
-      margin-bottom:10px;
-    }
-
-    /* STATS */
-    .stats {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:20px;
-      max-width:1000px;
-      margin:auto;
-    }
-    .counter-box {
-      background:#e8f6ef;
-      padding:30px;
-      border-radius:12px;
-      flex:1 1 200px;
-      text-align:center;
-      transition:.3s;
-    }
-    .counter-box:hover { transform:translateY(-5px); }
-    .counter {
-      font-size:2.5rem;
-      color:#00c983;
-      font-weight:bold;
-    }
-
-    /* FAQS */
-    .faq-container {
-      max-width:900px;
-      margin:auto;
-      text-align:left;
-    }
-    .faq-item {
-      background:#e8f6ef;
-      margin-bottom:15px;
-      padding:20px;
-      border-radius:10px;
-      cursor:pointer;
-      transition:.3s;
-    }
-    .faq-item:hover { background:#d9f3e7; }
-    .faq-item h3 {
-      color:#00693a;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
-    .faq-item p {
-      display:none;
-      margin-top:10px;
-      color:#333;
-    }
-
-    /* CONTACT */
-    #contact {
-      background: #f4fff9;
-      color: #004d40;
-    }
-
-    .contact-form {
-      max-width: 550px;
-      margin: 30px auto 0;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      padding: 25px;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      resize: none;
-    }
-
-    .contact-form textarea { min-height: 120px; }
-
-    .contact-form button {
-      background: #00c983;
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .contact-form button:hover { background: #009e67; }
-
-    footer {
-      background:#00693a;
-      color:#fff;
-      text-align:center;
-      padding:25px;
-      font-size:.9rem;
-    }
-
-    /* REVEAL ANIMATION */
-    .reveal { opacity:0; transform:translateY(60px); transition:all .6s ease; }
-    .reveal.active { opacity:1; transform:translateY(0); }
-
-    @media(max-width:768px){
-      .sidebar { flex-wrap:wrap;height:auto;padding:10px 0; }
-      .main-content { margin-top:100px; }
-      .nav-link span { display:none; }
-    }
-  </style>
 </head>
 <body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <img src="logo.png" alt="InnovaTrack Logo" class="loader-logo">
+  </div>
 
   <!-- NAVBAR -->
   <nav class="sidebar">
@@ -309,19 +24,22 @@
     <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i><span>About</span></a>
     <a href="#features" class="nav-link"><i class="fas fa-star"></i><span>Features</span></a>
     <a href="#howitworks" class="nav-link"><i class="fas fa-cogs"></i><span>How It Works</span></a>
+    <a href="#pricing" class="nav-link"><i class="fas fa-dollar-sign"></i><span>Pricing</span></a>
     <a href="#faqs" class="nav-link"><i class="fas fa-question-circle"></i><span>FAQs</span></a>
     <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
   </nav>
 
   <!-- MAIN CONTENT -->
   <main class="main-content">
+
+    <!-- HOME -->
     <section id="home">
       <div class="home-content">
-        <h1><span class="highlight">Smart Seat Plan</span><br>Scanner Revolution</h1>
-        <p>Empowering classrooms with QR-based seat tracking and smart attendance management.</p>
+        <h1>Welcome to <span class="highlight">InnovaTrack</span></h1>
+        <p>Smart Seat Plan & Attendance System for Schools</p>
         <div class="home-buttons">
-          <a href="#features" class="btn">Discover Features</a>
-          <a href="#howitworks" class="btn-outline">See How It Works</a>
+          <a href="#about" class="btn">Learn More</a>
+          <a href="#features" class="btn-outline">Explore Features</a>
         </div>
       </div>
     </section>
@@ -329,51 +47,67 @@
     <!-- ABOUT -->
     <section id="about" class="reveal">
       <h2>About Us</h2>
+      <p class="about-intro">
+        InnovaTrack is a smart QR-based seat plan and attendance system designed for classrooms.
+        It helps teachers efficiently track seating arrangements, attendance records, and student participation
+        using modern technology integration.
+      </p>
       <div class="about-container">
-        <div class="about-box"><h3>Vision</h3><p>To lead smart attendance innovations nationwide.</p></div>
-        <div class="about-box"><h3>Mission</h3><p>To automate attendance through QR code technology.</p></div>
-        <div class="about-box"><h3>Core Values</h3><p>Innovation • Integrity • Efficiency • Accessibility</p></div>
+        <div class="about-box"><i class="fas fa-eye"></i><h3>Vision</h3><p>To lead smart attendance innovations nationwide.</p></div>
+        <div class="about-box"><i class="fas fa-bullseye"></i><h3>Mission</h3><p>To automate attendance through QR code technology.</p></div>
+        <div class="about-box"><i class="fas fa-heart"></i><h3>Core Values</h3><p>Innovation • Integrity • Efficiency • Accessibility</p></div>
       </div>
     </section>
 
     <!-- FEATURES -->
     <section id="features" class="reveal">
-      <h2>Key Features</h2>
-      <div class="feature-container">
-        <div class="feature-box"><i class="fas fa-qrcode"></i><h3>Unique QR Codes</h3><p>Each student has a personalized seat code.</p></div>
-        <div class="feature-box"><i class="fas fa-chart-line"></i><h3>Smart Analytics</h3><p>View attendance trends in real-time.</p></div>
-        <div class="feature-box"><i class="fas fa-cloud"></i><h3>Cloud Access</h3><p>Data synced safely and accessed anywhere.</p></div>
-        <div class="feature-box"><i class="fas fa-bell"></i><h3>Instant Alerts</h3><p>Notifies teachers for absences or irregularities.</p></div>
+      <h2>Features</h2>
+      <p>Our system offers essential tools to help teachers manage classrooms efficiently.</p>
+      <div class="features-container">
+        <div class="feature-box"><i class="fas fa-qrcode"></i><h3>QR Attendance</h3><p>Scan QR codes to automatically log attendance.</p></div>
+        <div class="feature-box"><i class="fas fa-chair"></i><h3>Seat Management</h3><p>Organize classroom seating with digital tracking.</p></div>
+        <div class="feature-box"><i class="fas fa-chart-line"></i><h3>Analytics</h3><p>Monitor attendance and participation trends.</p></div>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
     <section id="howitworks" class="reveal">
       <h2>How It Works</h2>
+      <p>Follow these simple steps to set up and use InnovaTrack in your classroom.</p>
       <div class="steps">
-        <div class="step"><i class="fas fa-id-badge"></i><h3>Generate Codes</h3><p>Students receive unique QR codes.</p></div>
-        <div class="step"><i class="fas fa-qrcode"></i><h3>Scan</h3><p>Teachers scan to mark attendance.</p></div>
-        <div class="step"><i class="fas fa-database"></i><h3>Store & Analyze</h3><p>All data stored and analyzed instantly.</p></div>
+        <div class="step"><i class="fas fa-user-plus"></i><h3>Step 1</h3><p>Sign Up first then register each student and generate a unique QR code.</p></div>
+        <div class="step"><i class="fas fa-qrcode"></i><h3>Step 2</h3><p>Students scan their QR code upon entering the classroom.</p></div>
+        <div class="step"><i class="fas fa-database"></i><h3>Step 3</h3><p>Data is stored and analyzed for attendance tracking.</p></div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="reveal">
+      <h2>Pricing</h2>
+      <p>Choose the plan that suits your classroom needs.</p>
+      <div class="pricing-container">
+        <div class="pricing-box"><h3>Free</h3><p>Manual Attendance</p></div>
+        <div class="pricing-box"><h3>₱250</h3><p>QR Code with Scanner</p></div>
+        <div class="pricing-box"><h3>₱500</h3><p>Manual + QR Code Generator, QR Scanner & Reports</p></div>
       </div>
     </section>
 
     <!-- STATS -->
     <section id="stats" class="reveal">
-      <h2>Our Impact</h2>
-      <div class="stats">
-        <div class="counter-box"><div class="counter" data-target="1200">0</div><p>Students Managed</p></div>
-        <div class="counter-box"><div class="counter" data-target="85">0</div><p>Classrooms Served</p></div>
-        <div class="counter-box"><div class="counter" data-target="15">0</div><p>Schools Integrated</p></div>
+      <div class="stats-container">
+        <div class="stat"><div class="counter" data-target="1200">0</div><p>Students Tracked</p></div>
+        <div class="stat"><div class="counter" data-target="50">0</div><p>Classes Using</p></div>
+        <div class="stat"><div class="counter" data-target="10">0</div><p>Schools Partnered</p></div>
       </div>
     </section>
 
     <!-- FAQS -->
     <section id="faqs" class="reveal">
-      <h2>Frequently Asked Questions</h2>
+      <h2>FAQs</h2>
       <div class="faq-container">
-        <div class="faq-item"><h3>How do I register my seat? <i class="fas fa-plus"></i></h3><p>Students will be provided with a QR code assigned to their seat by their teacher.</p></div>
-        <div class="faq-item"><h3>Can this system work offline? <i class="fas fa-plus"></i></h3><p>InnovaTrack primarily works online but supports local data caching when offline.</p></div>
-        <div class="faq-item"><h3>Is my data secure? <i class="fas fa-plus"></i></h3><p>All data is encrypted and securely stored on cloud servers with access control.</p></div>
+        <div class="faq-item"><h3>How do I register my class? <i class="fas fa-plus"></i></h3><p>Teachers can sign up and input class details in the dashboard to get started.</p></div>
+        <div class="faq-item"><h3>Do students need accounts? <i class="fas fa-plus"></i></h3><p>Not necessarily — each student only needs their QR code for scanning.</p></div>
+        <div class="faq-item"><h3>Can it be used offline? <i class="fas fa-plus"></i></h3><p>Yes, it can temporarily store attendance locally and sync later when online.</p></div>
       </div>
     </section>
 
@@ -381,22 +115,39 @@
     <section id="contact" class="reveal">
       <h2>Contact Us</h2>
       <p>Have questions or feedback? Send us a message below.</p>
-      <form action="https://formsubmit.co/marvingrafil19@gmail.com" method="POST" class="contact-form">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Message from InnovaTrack Website!">
-        <input type="hidden" name="_template" value="box">
-
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      <div class="contact-container">
+        <form action="https://formsubmit.co/YOUR_GMAIL@gmail.com" method="POST" class="contact-form">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Message from InnovaTrack Website!">
+          <input type="hidden" name="_template" value="box">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+          <p class="success-message" style="display:none; color:green;">✅ Thank you! Your message has been sent.</p>
+          <p class="error-message" style="display:none; color:red;">❌ Oops! Something went wrong. Please try again.</p>
+        </form>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61582482577448&_rdc=1&_rdr#" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@innova.track?_t=ZS-90me0Lk4gcP&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/innova_track?igsh=MTJ2Zmp2OGxpcHc4bA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
     </section>
 
-    <footer>© 2025 InnovaTrack. All rights reserved.</footer>
   </main>
 
+  <footer>
+    <p>&copy; 2025 InnovaTrack. All Rights Reserved.</p>
+  </footer>
+
   <script>
+    // LOADER FADE-OUT
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      setTimeout(() => loader.classList.add('fade-out'), 1000);
+    });
+
     // NAV ACTIVE STATE
     const links = document.querySelectorAll('.nav-link');
     links.forEach(link => {
@@ -430,17 +181,30 @@
       update();
     });
 
-    // FAQ TOGGLE
+    // FAQ TOGGLE FUNCTION
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
       item.addEventListener('click', () => {
-        const p = item.querySelector('p');
+        const answer = item.querySelector('p');
         const icon = item.querySelector('i');
-        const isOpen = p.style.display === 'block';
-        p.style.display = isOpen ? 'none' : 'block';
-        icon.classList.toggle('fa-plus');
-        icon.classList.toggle('fa-minus');
+        const isOpen = answer.style.display === 'block';
+        faqItems.forEach(i => {
+          i.querySelector('p').style.display = 'none';
+          i.querySelector('i').classList.replace('fa-minus', 'fa-plus');
+        });
+        if (!isOpen) {
+          answer.style.display = 'block';
+          icon.classList.replace('fa-plus', 'fa-minus');
+        }
       });
+    });
+
+    // CONTACT FORM SUCCESS MESSAGE
+    const contactForm = document.querySelector('.contact-form');
+    contactForm.addEventListener('submit', e => {
+      const success = contactForm.querySelector('.success-message');
+      success.style.display = 'block';
+      setTimeout(() => success.style.display = 'none', 5000);
     });
   </script>
 </body>
