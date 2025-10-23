@@ -9,203 +9,205 @@
 </head>
 <body>
 
-  <!-- LOADING SCREEN -->
-  <div id="loader">
-    <img src="logo.png" alt="InnovaTrack Logo" class="loader-logo">
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <img src="logo.png" alt="InnovaTrack Logo" class="loader-logo">
+</div>
+
+<!-- NAVBAR -->
+<nav class="sidebar">
+  <a href="#home" class="logo-link">
+    <img src="logo.png" alt="Logo" class="logo">
+    <span>InnovaTrack</span>
+  </a>
+  <a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Home</span></a>
+  <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i><span>About</span></a>
+  <a href="#features" class="nav-link"><i class="fas fa-star"></i><span>Features</span></a>
+  <a href="#howitworks" class="nav-link"><i class="fas fa-cogs"></i><span>How It Works</span></a>
+  <a href="#pricing" class="nav-link"><i class="fas fa-dollar-sign"></i><span>Pricing</span></a>
+  <a href="#faqs" class="nav-link"><i class="fas fa-question-circle"></i><span>FAQs</span></a>
+  <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+<!-- HOME -->
+<section id="home">
+  <div class="home-content">
+    <h1>Welcome to <span class="highlight">InnovaTrack</span></h1>
+    <p>Smart Seat Plan & Attendance System for Schools</p>
+    <div class="home-buttons">
+      <a href="#about" class="btn">Learn More</a>
+      <a href="#features" class="btn-outline">Explore Features</a>
+      <a href="https://marvsgrafil.github.io/InnovaTrack/" class="btn-try" target="_blank">Try Now</a>
+    </div>
   </div>
+</section>
 
-  <!-- NAVBAR -->
-  <nav class="sidebar">
-    <a href="#home" class="logo-link">
-      <img src="logo.png" alt="Logo" class="logo">
-      <span>InnovaTrack</span>
-    </a>
-    <a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Home</span></a>
-    <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i><span>About</span></a>
-    <a href="#features" class="nav-link"><i class="fas fa-star"></i><span>Features</span></a>
-    <a href="#howitworks" class="nav-link"><i class="fas fa-cogs"></i><span>How It Works</span></a>
-    <a href="#pricing" class="nav-link"><i class="fas fa-dollar-sign"></i><span>Pricing</span></a>
-    <a href="#faqs" class="nav-link"><i class="fas fa-question-circle"></i><span>FAQs</span></a>
-    <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
-  </nav>
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <h2>About Us</h2>
+  <p class="about-intro">
+    InnovaTrack is a smart QR-based seat plan and attendance system designed for classrooms.
+    It helps teachers efficiently track seating arrangements, attendance records, and student participation.
+  </p>
+  <div class="about-container">
+    <div class="about-box"><i class="fas fa-eye"></i><h3>Vision</h3><p>To lead smart attendance innovations nationwide.</p></div>
+    <div class="about-box"><i class="fas fa-bullseye"></i><h3>Mission</h3><p>To automate attendance through QR code technology.</p></div>
+    <div class="about-box"><i class="fas fa-heart"></i><h3>Core Values</h3><p>Innovation • Integrity • Efficiency • Accessibility</p></div>
+  </div>
+</section>
 
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
+<!-- FEATURES -->
+<section id="features" class="reveal">
+  <h2>Features</h2>
+  <p>Our system offers essential tools to help teachers manage classrooms efficiently.</p>
+  <div class="features-container">
+    <div class="feature-box"><i class="fas fa-qrcode"></i><h3>QR Attendance</h3><p>Scan QR codes to automatically log attendance.</p></div>
+    <div class="feature-box"><i class="fas fa-chair"></i><h3>Seat Management</h3><p>Organize classroom seating with digital tracking.</p></div>
+    <div class="feature-box"><i class="fas fa-chart-line"></i><h3>Analytics</h3><p>Monitor attendance and participation trends.</p></div>
+  </div>
+</section>
 
-    <!-- HOME -->
-    <section id="home">
-      <div class="home-content">
-        <h1>Welcome to <span class="highlight">InnovaTrack</span></h1>
-        <p>Smart Seat Plan & Attendance System for Schools</p>
-        <div class="home-buttons">
-          <a href="#about" class="btn">Learn More</a>
-          <a href="#features" class="btn-outline">Explore Features</a>
-        </div>
+<!-- HOW IT WORKS -->
+<section id="howitworks" class="reveal">
+  <h2>How It Works</h2>
+  <p>Click each step to view the demonstration video.</p>
+  <div class="steps">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front"><h3>Step 1</h3><p>Sign Up & register students, generate QR codes.</p></div>
+        <div class="flip-card-back"><video src="step1.mp4" controls></video></div>
       </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="reveal">
-      <h2>About Us</h2>
-      <p class="about-intro">
-        InnovaTrack is a smart QR-based seat plan and attendance system designed for classrooms.
-        It helps teachers efficiently track seating arrangements, attendance records, and student participation
-        using modern technology integration.
-      </p>
-      <div class="about-container">
-        <div class="about-box"><i class="fas fa-eye"></i><h3>Vision</h3><p>To lead smart attendance innovations nationwide.</p></div>
-        <div class="about-box"><i class="fas fa-bullseye"></i><h3>Mission</h3><p>To automate attendance through QR code technology.</p></div>
-        <div class="about-box"><i class="fas fa-heart"></i><h3>Core Values</h3><p>Innovation • Integrity • Efficiency • Accessibility</p></div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front"><h3>Step 2</h3><p>Students scan QR code upon entering the classroom.</p></div>
+        <div class="flip-card-back"><video src="step2.mp4" controls></video></div>
       </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section id="features" class="reveal">
-      <h2>Features</h2>
-      <p>Our system offers essential tools to help teachers manage classrooms efficiently.</p>
-      <div class="features-container">
-        <div class="feature-box"><i class="fas fa-qrcode"></i><h3>QR Attendance</h3><p>Scan QR codes to automatically log attendance.</p></div>
-        <div class="feature-box"><i class="fas fa-chair"></i><h3>Seat Management</h3><p>Organize classroom seating with digital tracking.</p></div>
-        <div class="feature-box"><i class="fas fa-chart-line"></i><h3>Analytics</h3><p>Monitor attendance and participation trends.</p></div>
+    </div>
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front"><h3>Step 3</h3><p>Data is stored and analyzed for attendance tracking.</p></div>
+        <div class="flip-card-back"><video src="step3.mp4" controls></video></div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- HOW IT WORKS -->
-    <section id="howitworks" class="reveal">
-      <h2>How It Works</h2>
-      <p>Follow these simple steps to set up and use InnovaTrack in your classroom.</p>
-      <div class="steps">
-        <div class="step"><i class="fas fa-user-plus"></i><h3>Step 1</h3><p>Sign Up first then register each student and generate a unique QR code.</p></div>
-        <div class="step"><i class="fas fa-qrcode"></i><h3>Step 2</h3><p>Students scan their QR code upon entering the classroom.</p></div>
-        <div class="step"><i class="fas fa-database"></i><h3>Step 3</h3><p>Data is stored and analyzed for attendance tracking.</p></div>
-      </div>
-    </section>
+<!-- PRICING -->
+<section id="pricing" class="reveal">
+  <h2>Pricing</h2>
+  <p>Choose the plan that suits your classroom needs.</p>
+  <div class="pricing-container">
+    <div class="pricing-box"><h3>Free</h3><p>Manual Attendance</p></div>
+    <div class="pricing-box"><h3>₱250</h3><p>QR Code with Scanner</p></div>
+    <div class="pricing-box"><h3>₱500</h3><p>Manual + QR Code Generator, QR Scanner & Reports</p></div>
+  </div>
+</section>
 
-    <!-- PRICING -->
-    <section id="pricing" class="reveal">
-      <h2>Pricing</h2>
-      <p>Choose the plan that suits your classroom needs.</p>
-      <div class="pricing-container">
-        <div class="pricing-box"><h3>Free</h3><p>Manual Attendance</p></div>
-        <div class="pricing-box"><h3>₱250</h3><p>QR Code with Scanner</p></div>
-        <div class="pricing-box"><h3>₱500</h3><p>Manual + QR Code Generator, QR Scanner & Reports</p></div>
-      </div>
-    </section>
+<!-- STATS -->
+<section id="stats" class="reveal">
+  <div class="stats-container">
+    <div class="stat"><div class="counter" data-target="1200">0</div><p>Students Tracked</p></div>
+    <div class="stat"><div class="counter" data-target="50">0</div><p>Classes Using</p></div>
+    <div class="stat"><div class="counter" data-target="10">0</div><p>Schools Partnered</p></div>
+  </div>
+</section>
 
-    <!-- STATS -->
-    <section id="stats" class="reveal">
-      <div class="stats-container">
-        <div class="stat"><div class="counter" data-target="1200">0</div><p>Students Tracked</p></div>
-        <div class="stat"><div class="counter" data-target="50">0</div><p>Classes Using</p></div>
-        <div class="stat"><div class="counter" data-target="10">0</div><p>Schools Partnered</p></div>
-      </div>
-    </section>
+<!-- FAQS -->
+<section id="faqs" class="reveal">
+  <h2>FAQs</h2>
+  <div class="faq-container">
+    <div class="faq-item"><h3>How do I register my class? <i class="fas fa-plus"></i></h3><p>Teachers can sign up and input class details in the dashboard to get started.</p></div>
+    <div class="faq-item"><h3>Do students need accounts? <i class="fas fa-plus"></i></h3><p>Not necessarily — each student only needs their QR code for scanning.</p></div>
+    <div class="faq-item"><h3>Can it be used offline? <i class="fas fa-plus"></i></h3><p>Yes, it can temporarily store attendance locally and sync later when online.</p></div>
+  </div>
+</section>
 
-    <!-- FAQS -->
-    <section id="faqs" class="reveal">
-      <h2>FAQs</h2>
-      <div class="faq-container">
-        <div class="faq-item"><h3>How do I register my class? <i class="fas fa-plus"></i></h3><p>Teachers can sign up and input class details in the dashboard to get started.</p></div>
-        <div class="faq-item"><h3>Do students need accounts? <i class="fas fa-plus"></i></h3><p>Not necessarily — each student only needs their QR code for scanning.</p></div>
-        <div class="faq-item"><h3>Can it be used offline? <i class="fas fa-plus"></i></h3><p>Yes, it can temporarily store attendance locally and sync later when online.</p></div>
-      </div>
-    </section>
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <h2>Contact Us</h2>
+  <p>Have questions or feedback? Send us a message below.</p>
+  <div class="contact-container">
+    <form action="https://formsubmit.co/YOUR_GMAIL@gmail.com" method="POST" class="contact-form">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Message from InnovaTrack Website!">
+      <input type="hidden" name="_template" value="box">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <p class="success-message" style="display:none;color:green;">✅ Thank you! Your message has been sent.</p>
+      <p class="error-message" style="display:none;color:red;">❌ Oops! Something went wrong. Please try again.</p>
+    </form>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61582482577448&_rdc=1&_rdr#" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://www.tiktok.com/@innova.track?_t=ZS-90me0Lk4gcP&_r=1" target="_blank"><i class="fab fa-tiktok fa-2x"></i></a>
+      <a href="https://www.instagram.com/innova_track?igsh=MTJ2Zmp2OGxpcHc4bA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>
+  </div>
+</section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="reveal">
-      <h2>Contact Us</h2>
-      <p>Have questions or feedback? Send us a message below.</p>
-      <div class="contact-container">
-        <form action="https://formsubmit.co/YOUR_GMAIL@gmail.com" method="POST" class="contact-form">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="New Message from InnovaTrack Website!">
-          <input type="hidden" name="_template" value="box">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-          <p class="success-message" style="display:none; color:green;">✅ Thank you! Your message has been sent.</p>
-          <p class="error-message" style="display:none; color:red;">❌ Oops! Something went wrong. Please try again.</p>
-        </form>
-        <div class="social-links">
-          <a href="https://www.facebook.com/profile.php?id=61582482577448&_rdc=1&_rdr#" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.tiktok.com/@innova.track?_t=ZS-90me0Lk4gcP&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
-          <a href="https://www.instagram.com/innova_track?igsh=MTJ2Zmp2OGxpcHc4bA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </section>
+</main>
 
-  </main>
+<footer>
+  <p>&copy; 2025 InnovaTrack. All Rights Reserved.</p>
+</footer>
 
-  <footer>
-    <p>&copy; 2025 InnovaTrack. All Rights Reserved.</p>
-  </footer>
+<script>
+// LOADER FADE-OUT
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  setTimeout(() => loader.classList.add('fade-out'), 1000);
+});
 
-  <script>
-    // LOADER FADE-OUT
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      setTimeout(() => loader.classList.add('fade-out'), 1000);
-    });
+// NAV ACTIVE STATE
+const links = document.querySelectorAll('.nav-link');
+links.forEach(link => link.addEventListener('click', () => {
+  links.forEach(l => l.classList.remove('active'));
+  link.classList.add('active');
+}));
 
-    // NAV ACTIVE STATE
-    const links = document.querySelectorAll('.nav-link');
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        links.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      });
-    });
+// REVEAL ON SCROLL
+const reveals = document.querySelectorAll('.reveal');
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight-100) el.classList.add('active');
+  });
+});
 
-    // REVEAL ON SCROLL
-    const reveals = document.querySelectorAll('.reveal');
-    window.addEventListener('scroll', () => {
-      reveals.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) el.classList.add('active');
-      });
-    });
+// COUNTER
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const inc = target/100;
+    if(count<target){counter.innerText=Math.ceil(count+inc);setTimeout(update,20);} 
+    else counter.innerText=target;
+  };
+  update();
+});
 
-    // COUNTER ANIMATION
-    const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
-      const update = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const inc = target / 100;
-        if (count < target) {
-          counter.innerText = Math.ceil(count + inc);
-          setTimeout(update, 20);
-        } else counter.innerText = target;
-      };
-      update();
-    });
+// FAQ TOGGLE
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item=>item.addEventListener('click',()=>{
+  const answer = item.querySelector('p'); const icon = item.querySelector('i'); const isOpen = answer.style.display==='block';
+  faqItems.forEach(i=>{i.querySelector('p').style.display='none';i.querySelector('i').classList.replace('fa-minus','fa-plus');});
+  if(!isOpen){answer.style.display='block';icon.classList.replace('fa-plus','fa-minus');}
+}));
 
-    // FAQ TOGGLE FUNCTION
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const answer = item.querySelector('p');
-        const icon = item.querySelector('i');
-        const isOpen = answer.style.display === 'block';
-        faqItems.forEach(i => {
-          i.querySelector('p').style.display = 'none';
-          i.querySelector('i').classList.replace('fa-minus', 'fa-plus');
-        });
-        if (!isOpen) {
-          answer.style.display = 'block';
-          icon.classList.replace('fa-plus', 'fa-minus');
-        }
-      });
-    });
-
-    // CONTACT FORM SUCCESS MESSAGE
-    const contactForm = document.querySelector('.contact-form');
-    contactForm.addEventListener('submit', e => {
-      const success = contactForm.querySelector('.success-message');
-      success.style.display = 'block';
-      setTimeout(() => success.style.display = 'none', 5000);
-    });
-  </script>
+// CONTACT FORM SUCCESS/ERROR
+const contactForm = document.querySelector('.contact-form');
+contactForm.addEventListener('submit', e=>{
+  const success = contactForm.querySelector('.success-message');
+  const error = contactForm.querySelector('.error-message');
+  success.style.display='block'; error.style.display='none';
+  setTimeout(()=>success.style.display='none',5000);
+});
+</script>
 </body>
 </html>
